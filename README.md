@@ -1,1 +1,1 @@
-My HTML CV !
+Hi, this is my web page CV to let you know a bit about me. I developed this project in basic HTML5, CSS and JavaScript. This web page is hosted live at https://antoniogargaro.github.io/Beamery-Preintro-CV/.
