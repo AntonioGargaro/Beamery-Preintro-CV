@@ -1,55 +1,74 @@
 body {
-    padding: 10px;
-    font-family: arial;
+  overflow-y: hidden;
+  font-family: Lato, sans-serif;
 }
 
-main, header, section, aside, footer {
-    margin: 0;
-    padding: 10px;
-    /* border: 1px solid #000000; */
-    color: #000;
+html, body {
+  height: 100%;
+  margin:0;
+  padding:0;
+}
+
+header, aside, footer {
+  margin: 0;
+  padding: 10px;
+  /* border: 1px solid #000000; */
+  color: #000;
 }
 
 main {
-    background: #fff;
+  background: #fff;
 }
 
+
 .header {
-    background: #e2e2e2;
+  background: #e2e2e2;
 }
 
 .hero {
-    background: #fff;
+  background: #fff;
 }
 
 @media screen and (min-width:640px) {
-    .flex-container {
-        display: flex;
-        padding:5px;
-    }
+  .flex-container {
+    display: flex;
+    flex-flow: row-reverse;
+    padding:5px;
+  }
 
-    .flex-container > section, aside {
-        margin: 5px;
-    }
+  .flex-container > section, aside {
+    margin: 5px;
+  }
 }
 
 .wrapper {
-    margin: auto;
-    max-width: 75rem;
+  margin: auto;
+  max-width: 85rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .profile-card {
-    flex: 0 1 25%;
-    padding: 0px;
+  flex: 0 1 25%;
+  padding: 0px;
 }
 
 .content {
-    flex: 1;
-    background: #e2e2e2;
+  flex: 1;
+  color: #888888;
+  padding: 0;
+}
+
+.content > .content-card {
+  color: #777;
+  background-color: white;
+  text-align: center;
+  margin: 50px 80px;
+  text-align: justify;
 }
 
 .footer {
-    background: #e2e2e2;
+  background: #e2e2e2;
 }
 
 
@@ -59,43 +78,172 @@ main {
     https://www.w3schools.com/howto/howto_css_profile_card.asp
 */
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    border-radius: 5px;
-    background: #e2e2e2;
-    margin: auto;
-    text-align: center;
-  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 320px;
+  border-radius: 5px;
+  background: #e2e2e2;
+  margin: auto;
+  text-align: center;
+}
 
 .card > .profile-card-picture {
-    border-radius: 5px;
+  border-radius: 5px;
 }
   
-  .title {
-    color: grey;
-    font-size: 18px;
+.title {
+  color: grey;
+  font-size: 18px;
+}
+  
+.profile-card-email {
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.profile-card-email:hover, a:hover {
+  opacity: 0.7;
+}
+
+
+
+
+/*  CSS for parallax scrolling effect
+    https://alligator.io/css/pure-css-parallax/
+*/
+
+.parallax-wrapper {
+/* The height needs to be set to a fixed value for the effect to work.
+  * 100vh is the full height of the viewport. */
+height: 100vh;
+/* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+overflow-x: hidden;
+/* Enable scrolling on the page. */
+overflow-y: auto;
+/* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+perspective: 2px;
+}
+
+.parallax-section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+  
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */ 
+  z-index: -1;
+
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* The styling for the static div. */
+.static {
+  background: white;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1::after {
+  background-image: url('../img/aboutme-1.jpg');
+}
+
+.bg2::after {
+  background-image: url('../img/edinburgh-castle.jpg');
+}
+
+
+.parallax-caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.parallax-border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+/* Turn off parallax scrolling for all tablets and phones */
+  @media only screen and (max-device-width: 640px) {
+      .parallax {
+          height: 100vh;
+          background-attachment: scroll;
+      }
+
+      .parallax-border {
+          font-size: 16px;
+      }
+
+      .content {
+          overflow-y: auto;
+      }
+  }
+
+
+
+
+/* Scrollbar css */
+
+    /* width */
+::-webkit-scrollbar {
+    width: 10px;
   }
   
-  .profile-card-email {
-    border: none;
-    border-radius: 5px;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
   }
   
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
   }
   
-  .profile-card-email:hover, a:hover {
-    opacity: 0.7;
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
   }
