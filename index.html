@@ -7,53 +7,70 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <!-- Font library -->
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-  <!-- Main Content -->
-  <main>
-    <!-- TODO: About Me, Projects, Achievments -->
-    <header class="header">
-      Header
-    </header>
+  <!-- TODO: About Me, Projects, Achievments -->
+  <header class="header">
+    Header
+  </header>
 
-    <!-- TODO: Hero landing -->
-    <section class="hero">
-      Hero
+  <!-- Main Content -->
+  <main class="parallax-wrapper">
+    
+    <section class="parallax-section parallax bg1">
+        <div class="parallax-caption">
+            <span class="parallax-border">SCROLL DOWN</span>
+        </div>
+    </section>
+  
+
+    <section class="static">
+      <div class="flex-container wrapper">
+     
+        <!-- Content -->
+        <section class="content">
+            <div class="content-card">
+              <h3 style="text-align:center;">Who am I?</h3>
+              <p>
+                  Hi, my name is Antonio Gargaro. I was born in Edinburgh, Scotland which is where I have been for the last 21 years.
+              </p>
+            </div>
+        </section>
+
+        <!-- Profile Card -->
+        <section class="profile-card">
+            <div class="card">
+              <img class="profile-card-picture" src="img/profile-pic.jpg" alt="Antonio" style="width:100%">
+              <h1>Antonio Gargaro</h1>
+              <p class="title">Graduate Software Engineer</p>
+              <p>Heriot-Watt University</p>
+              <a href="https://www.linkedin.com/in/antoniogargaro/" target="_blank"><i class="fa fa-linkedin"></i></a> 
+              <a href="https://github.com/AntonioGargaro" target="_blank"><i class="fa fa-github"></i></a> 
+              <a href="https://bitbucket.org/AntonioGargaro/" target="_blank"><i class="fa fa-bitbucket"></i></a> 
+              <p>
+                <form class="profile-card-form" method="post" action="mailto:antoniogargaro@virginmedia.com" >
+                <input class="profile-card-email" type="submit" value="Contact"/> 
+                </form>
+              </p>
+            </div>
+        </section>
+      
+      </div>
     </section>
 
-
-    <div class="flex-container wrapper">
-
-      <!-- Profile Card -->
-      <section class="profile-card">
-          <div class="card">
-            <img src="img/profile-pic.jpg" alt="Antonio" style="width:100%">
-            <h1>Antonio Gargaro</h1>
-            <p class="title">Graduate Software Engineer</p>
-            <p>Heriot-Watt University</p>
-            <a href="#"><i class="fa fa-linkedin"></i></a> 
-            <a href="#"><i class="fa fa-github"></i></a> 
-            <a href="#"><i class="fa fa-bitbucket"></i></a> 
-            <p><button>Contact</button></p>
-          </div>
-      </section>
-    
-      <!-- Content -->
-      <section class="content">
-          Content 
-          ...
-      </section>
      
-     </div>
+     <section class="parallax-section parallax bg2">
+    </section>
     
 
     <footer class="footer">
