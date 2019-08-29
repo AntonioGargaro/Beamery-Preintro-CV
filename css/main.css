@@ -30,6 +30,11 @@ ul li {
   position: relative;
 }
 
+ul.header-item-container {
+  padding-inline-start: 0px;
+}
+
+
  ul li::before {
   color: #31b3a4;  
   /* color of bullet or square */
@@ -49,7 +54,11 @@ ul li {
 
   top: 0em; 
   /* use em or % */
+}
 
+ul.header-item-container li::before  {
+  list-style-type: none;
+  content: none;
 }
 
 
@@ -88,10 +97,7 @@ ul li {
   max-height: 55px;
 }
 
-ul.header-item-container li::before  {
-  list-style-type: none;
-  content: none;
-}
+
 
 .header-item-container {
   display: flex;
