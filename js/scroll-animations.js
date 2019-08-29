@@ -2,6 +2,7 @@
 
 function scrollProgress() {
     let root = document.getElementById("root");
+    let navBar = document.getElementById("header");
     let pb = document.getElementById("progress-bar");
     let pbf = document.getElementById("progress-bar-fill");
 
@@ -9,22 +10,23 @@ function scrollProgress() {
     let height = root.scrollHeight - root.clientHeight;
     let scrolled = (winScroll / height) * 100;
 
+    let prevScrolled = parseFloat(pbf.style.width.substring(0, pbf.style.width.length));
     pbf.style.width = scrolled + "%";
+
+    console.log((prevScrolled));
+    console.log(scrolled);
 
 
     let FROM = "not-scrolled";
     let TO = "scrolled";
 
-    if (scrolled === 0) {
+    if (scrolled === 0 || prevScrolled > scrolled) {
         FROM = "scrolled";
         TO = "not-scrolled";
 
-        pb.classList.add("no-height");
     } else {
         FROM = "not-scrolled";
         TO = "scrolled";
-
-        pb.classList.remove("no-height");
     }
 
     var elementsToUpdate = document.getElementsByClassName(FROM);
