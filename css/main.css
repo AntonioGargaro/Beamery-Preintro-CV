@@ -17,6 +17,7 @@ header, aside, footer {
 
 main {
   background: #fff;
+  scroll-behavior: smooth;
 }
 
 
@@ -52,14 +53,28 @@ main {
 
 .header-item {
   padding: 5px;
+  min-height: 35px;
+  width: 100%;
   margin: auto;
   text-align: center;
 }
 
 .header-item > a {
+  -webkit-transition: 0.5s; /* Safari prior 6.1 */
+  transition: 0.5s;
   font-size: 16px;
-  color: #fff;
+  color: #e2e2e2;
   margin: auto;
+}
+
+.header-item > a:hover {
+  font-weight: 900;
+}
+
+.header-item > a.inViewport {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
 }
 
 

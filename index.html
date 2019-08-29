@@ -20,21 +20,21 @@
   <script src="js/scroll-animations.js"></script>
 </head>
 
-<body>
+<body onload="init()">
 
   <!-- TODO: About Me, Projects, Achievments -->
   <header class="header not-scrolled">
     <div class="header-item-container">
       <div class="header-item">
-          <a href="#AboutMe">About Me</a>
+          <a id="aboutme-navbutton" href="#AboutMe">About Me</a>
       </div>
 
       <div class="header-item">
-          <a href="#Projects">Projects</a>
+          <a id="projects-navbutton" href="#Projects">Projects</a>
       </div>
 
       <div class="header-item">
-          <a href="#Achievements">Achievements</a>
+          <a id="achievements-navbutton" href="#Achievements">Achievements</a>
       </div>
     </div>
 
@@ -48,7 +48,7 @@
     
     <section id="AboutMe" class="parallax-section parallax bg1">
         <div class="parallax-caption">
-            <span class="parallax-border">SCROLL DOWN</span>
+            <span id="aboutme-caption" class="parallax-border">ABOUT ME</span>
         </div>
     </section>
   
@@ -88,7 +88,17 @@
     </section>
 
      
-     <section class="parallax-section parallax bg2">
+    <section id="Projects" class="parallax-section parallax bg2">
+        <div class="parallax-caption">
+            <span id="projects-caption" class="parallax-border">PROJECTS</span>
+        </div>
+    </section>
+
+
+    <section id="Achievements" class="parallax-section parallax bg2">
+        <div class="parallax-caption">
+            <span id="achievements-caption" class="parallax-border">Achievements</span>
+        </div>
     </section>
     
 
