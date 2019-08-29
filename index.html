@@ -22,8 +22,12 @@
 
 <body onload="init()">
 
+  <div id="loader-container">
+    <div class="loader"></div>
+  </div>
+
   <!-- TODO: About Me, Projects, Achievments -->
-  <header class="header not-scrolled">
+  <header id="header" style="display: none;" class="header not-scrolled">
     <div class="header-item-container">
       <div class="header-item">
           <a id="aboutme-navbutton" href="#AboutMe">About Me</a>
@@ -44,7 +48,7 @@
   </header>
 
   <!-- Main Content -->
-  <main id="root" class="parallax-wrapper" onscroll="scrollProgress()">
+  <main id="root" style="display: none;" class="parallax-wrapper" onscroll="scrollProgress()">
     
     <section id="AboutMe" class="parallax-section parallax bg1">
         <div class="parallax-caption">
