@@ -86,4 +86,9 @@ const updateNavButtons = () => {
 
 const init = () => {
     updateNavButtons();
+
+    /* Hide loader and show main content elements after init */
+    document.getElementById("loader-container").style.display = "none";
+    document.getElementById("header").style.display = "block";
+    document.getElementById("root").style.display = "block";
 }
