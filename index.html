@@ -15,19 +15,38 @@
   <!-- Font library -->
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- Scripts -->
+  <script src="js/scroll-animations.js"></script>
 </head>
 
 <body>
 
   <!-- TODO: About Me, Projects, Achievments -->
-  <header class="header">
-    Header
+  <header class="header not-scrolled">
+    <div class="header-item-container">
+      <div class="header-item">
+          <a href="#AboutMe">About Me</a>
+      </div>
+
+      <div class="header-item">
+          <a href="#Projects">Projects</a>
+      </div>
+
+      <div class="header-item">
+          <a href="#Achievements">Achievements</a>
+      </div>
+    </div>
+
+    <div id="progress-bar" class="header-progress-container no-height">
+      <div id="progress-bar-fill" class="progress-bar"></div>
+    </div> 
   </header>
 
   <!-- Main Content -->
-  <main class="parallax-wrapper">
+  <main id="root" class="parallax-wrapper" onscroll="scrollProgress()">
     
-    <section class="parallax-section parallax bg1">
+    <section id="AboutMe" class="parallax-section parallax bg1">
         <div class="parallax-caption">
             <span class="parallax-border">SCROLL DOWN</span>
         </div>
