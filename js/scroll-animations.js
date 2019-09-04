@@ -2,7 +2,7 @@
 
 function scrollProgress() {
     let root = document.getElementById("root");
-    let navBar = document.getElementById("header");
+    let navBar = document.getElementById("nav");
     let pb = document.getElementById("progress-bar");
     let pbf = document.getElementById("progress-bar-fill");
 
@@ -87,6 +87,6 @@ const init = () => {
 
     /* Hide loader and show main content elements after init */
     document.getElementById("loader-container").style.display = "none";
-    document.getElementById("header").style.display = "block";
+    document.getElementById("nav").style.display = "block";
     document.getElementById("root").style.display = "block";
 }
