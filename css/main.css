@@ -127,14 +127,12 @@ ul.header-item-container li::before  {
 }
 
 .header-item > a:hover {
-  font-size: 20px;
   color: #fff;
 }
 
 
 .header-item > a.inViewport {
   font-weight: bold;
-  font-size: 20px;
   color: #fff;
 }
 
@@ -246,6 +244,7 @@ ul.header-item-container li::before  {
   margin: auto;
   display: block;
   max-width: 80vw;
+  max-height: 80vh;
 }
 
 /* Caption of Modal Image */
@@ -420,15 +419,13 @@ background-image: url('../img/achievements.jpg');
 
 .parallax-caption {
   position: absolute;
-  left: 0;
+  padding: 18px;
   top: 50%;
-  width: 100%;
   text-align: center;
-  color: #000;
+  background-color: #000;
 }
 
 .parallax-border {
-  background-color: #111;
   color: #fff;
   padding: 18px;
   font-size: 25px;
@@ -451,7 +448,8 @@ background-image: url('../img/achievements.jpg');
       }
 
       .modal-content {
-        width: 100%;
+        max-height: 100vh;
+        max-width: 100vw;
       }
   }
 
