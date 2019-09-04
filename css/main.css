@@ -9,7 +9,7 @@ html, body {
   padding:0;
 }
 
-header, aside, footer {
+nav, aside, footer {
   margin: 0;
   /* border: 1px solid #000000; */
   color: #000;
@@ -30,7 +30,7 @@ ul li {
   position: relative;
 }
 
-ul.header-item-container {
+ul.nav-item-container {
   padding-inline-start: 0px;
 }
 
@@ -56,7 +56,7 @@ ul.header-item-container {
   /* use em or % */
 }
 
-ul.header-item-container li::before  {
+ul.nav-item-container li::before  {
   list-style-type: none;
   content: none;
 }
@@ -80,7 +80,7 @@ ul.header-item-container li::before  {
 }
 
 
-.header {
+.nav {
   position: fixed;
   top: 0;
   z-index: 100;
@@ -99,7 +99,7 @@ ul.header-item-container li::before  {
 
 
 
-.header-item-container {
+.nav-item-container {
   display: flex;
   flex-direction: row;
   overflow: hidden;
@@ -110,7 +110,7 @@ ul.header-item-container li::before  {
   max-width: 85rem;
 }
 
-.header-item {
+.nav-item {
   padding: 10px;
   min-height: 35px;
   width: 100%;
@@ -118,7 +118,7 @@ ul.header-item-container li::before  {
   text-align: center;
 }
 
-.header-item > a {
+.nav-item > a {
   -webkit-transition: 0.5s; /* Safari prior 6.1 */
   transition: 0.5s;
   font-size: 16px;
@@ -126,19 +126,19 @@ ul.header-item-container li::before  {
   margin: auto;
 }
 
-.header-item > a:hover {
+.nav-item > a:hover {
   color: #fff;
 }
 
 
-.header-item > a.inViewport {
+.nav-item > a.inViewport {
   font-weight: bold;
   color: #fff;
 }
 
 
 /* The progress container (grey background) */
-.header-progress-container {
+.nav-progress-container {
   -webkit-transition: 0.5s; /* Safari prior 6.1 */
   transition: 0.5s;
   overflow: hidden;
