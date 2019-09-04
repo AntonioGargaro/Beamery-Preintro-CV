@@ -163,30 +163,6 @@ ul.header-item-container li::before  {
 }
 
 
-@media screen and (min-width:640px) {
-  .flex-container-640px-min {
-    display: flex;
-    flex-flow: row;
-    padding:5px;
-  }
-  
-  .flex-row-reverse-640px-min {
-    flex-flow: row-reverse;
-  }
-
-  .flex-container > section, aside {
-    margin: 5px;
-  }
-}
-
-@media screen and (max-width:639px) {
-  .flex-container-639px-max {
-    display: flex;
-    flex-flow: column;
-    padding:5px;
-  }
-}
-
 .wrapper {
   margin: auto;
   max-width: 85rem;
@@ -197,6 +173,7 @@ ul.header-item-container li::before  {
 .profile-card {
   flex: 0 1 25%;
   padding: 0px;
+  margin-top: 50px;
 }
 
 .content {
@@ -216,8 +193,6 @@ ul.header-item-container li::before  {
 .footer {
   background: #e2e2e2;
 }
-
-
 
 
 /*  CSS for Profile Card
@@ -257,7 +232,6 @@ ul.header-item-container li::before  {
 
 a {
   text-decoration: none;
-  font-size: 22px;
   color: black;
 }
 
@@ -332,9 +306,12 @@ perspective: 2px;
 }
 
 .bg2::after {
-  background-image: url('../img/edinburgh-castle.jpg');
+  background-image: url('../img/diss-project.jpg');
 }
 
+.bg3::after {
+background-image: url('../img/achievements.jpg');
+}
 
 .parallax-caption {
   position: absolute;
@@ -427,4 +404,34 @@ perspective: 2px;
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
     z-index: 1000;
+  }
+
+
+
+  @media screen and (min-width:640px) {
+    .flex-container-640px-min {
+      display: flex;
+      flex-flow: row;
+      padding:5px;
+    }
+    
+    .flex-row-reverse-640px-min {
+      flex-flow: row-reverse;
+    }
+  
+    .flex-container > section, aside {
+      margin: 5px;
+    }
+  }
+  
+  @media screen and (max-width:639px) {
+    .flex-container-639px-max {
+      display: flex;
+      flex-flow: column;
+      padding:5px;
+    }
+  
+    .content > .content-card {
+      margin: 50px 30px;
+    }
   }
