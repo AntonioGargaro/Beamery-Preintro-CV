@@ -13,10 +13,6 @@ function scrollProgress() {
     let prevScrolled = parseFloat(pbf.style.width.substring(0, pbf.style.width.length));
     pbf.style.width = scrolled + "%";
 
-    console.log((prevScrolled));
-    console.log(scrolled);
-
-
     let FROM = "not-scrolled";
     let TO = "scrolled";
 

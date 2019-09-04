@@ -151,6 +151,8 @@
               </p>
               <p>View my dissertation <a href="https://drive.google.com/open?id=1ektU0ShFBmYU5CgLEZY-topLIcsczqVL" target="_blank">here</a>.</p>
 
+              <img class="img-content" src="img/diss-project.jpg" alt="Diss Project" style="width:100%;max-width:300px">
+
             </div>
 
             <div class="content-card">
@@ -181,7 +183,7 @@
         <!-- Content -->
         <section class="content">
             <div class="content-card">
-              <h3 style="text-align:center;">University</h3>
+              <h3 style="text-align:center;">University (2015-2019)</h3>
               <p>
                 I graduated university with a 1st class Bachelor's of Computer Science with the following awards,
               </p>
@@ -214,6 +216,42 @@
     </footer>
   </main>
   
+  <!-- The Modal -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="img-modal-caption" class="img-modal-caption"></div>
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var modalOverlay = document.getElementById("modal-overlay");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("img-modal-caption");
+
+    document.body.onclick = function(e) {
+      console.log(e)
+      e = window.event ? event.srcElement : e.target;
+      if (e.className && e.className.indexOf('img-content') != -1) {
+        modal.style.display = "block";
+        modalOverlay.style.display = "block";
+        modalImg.src = e.getAttribute('src');
+        captionText.innerHTML = "<p>"+e.getAttribute('alt')+"</p>";
+      }
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+      modalOverlay.style.display = "none";
+    }
+  </script>
 
 </body>
 
