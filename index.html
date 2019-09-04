@@ -38,7 +38,7 @@
       </li>
 
       <li class="header-item">
-          <a id="achievements-navbutton" href="#Achievements">Achievements</a>
+          <a id="achievements-navbutton" href="#Achievements">Skills & Achievements</a>
       </li>
     </ul>
 
@@ -67,9 +67,13 @@
               <p>
                   Hi, my name is Antonio (or Toni) Gargaro. I was born in Edinburgh, Scotland where I have lived all my life. 
                   My great-grandfather moved here which is why I have an italian name, but unfortunately that's where my <i>itanlianness</i> ends.
-                  <br><br>
-                  I attended Firrhill High School which led to me pursuring a degree in Computer Science at Heriot-Watt University which is all located in Edinburgh.
-                  This was the main factor as to why I decided to move to London so I can try something new and learn more about life outside my home city. 
+                  I enjoy travelling and have recently came back from travelling Asia which was a very surreal experience and my first taste of Asian culture.
+                  I hope to travel as much as possible and whenever I can with places like Japan, Vietnam and Australia on the bucket list.
+              </p>
+              <p>
+                  I pursued a degree in Computer Science at Heriot-Watt University as I have been interested in technology as long as I can remember. 
+                  I worked part-time at Nike during unviersity which introduced me to an active and positive working environment that I now look for in every place of work.
+                  After concluding this chapter of my life I have decided to move to London so I can try something new and learn more about life outside my home city. 
               </p>
 
               <div class="flex-container-640px-min flex-container-639px-max">
@@ -81,7 +85,7 @@
                     <li>Music Festivals</li>
                     <li>Travelling</li>
                     <li>Technology</li>
-                    <li>Golf</li>
+                    <li>Gym</li>
                   </ul>
                 </div>
 
@@ -129,19 +133,150 @@
         </div>
     </section>
 
+    <section class="static">
+      <div class="flex-container-640px-min wrapper">
+     
+        <!-- Content -->
+        <section class="content">
+            <div class="content-card">
+              <h3 style="text-align:center;">Dissertation</h3>
+              <p>
+                My dissertation stemmed from my passion of cryptocurrnecies and trading them on exchanges. 
+                I wanted to develop a tool that would make it easier to understand the direction a market was heading in using technical analysis.
+                This required an understanding of how financial markets worked and what similiarties were present in the crypto market.
+              </p>
+              <p>
+                The project was developed as a web app that used Software-as-a-Service (SaaS) to perform the technical analysis on the server and forward the output to a UI based dashboard in the browser.
+                From knowing virtually nothing about developing a web app, I researched and developed this project using Python's Flask for the server and React for the UI.
+              </p>
 
-    <section id="Achievements" class="parallax-section parallax bg2">
+              <div class="flex-container-640px-min flex-container-639px-max">
+              <img class="img-content" src="img/diss-project.jpg" alt="The trading dashboard." style="width:100%;max-width:300px;max-height:170px;margin:auto">
+              <img class="img-content" src="img/diss-project-ad1.jpeg" alt="Activity diagram of requesting data from Binance and using it within the system." style="width:100%;max-width:300px;max-height:170px;margin:auto">
+              </div>
+
+              
+              <p style="text-align: center">View my dissertation <a href="https://drive.google.com/open?id=1ektU0ShFBmYU5CgLEZY-topLIcsczqVL" target="_blank">here</a>.</p>
+              
+
+            </div>
+
+            <div class="content-card">
+              <h3 style="text-align:center;">Game Server</h3>
+              <p>
+                  Me and a few friends scripted and hosted a modded game server for Arma 2's DayZ Mod. 
+                  This was my first introduction to scripting, although it was an enjoyable experience to create something we were all proud of.
+                  After creating and releasing our server we then maintained and managed it, slowly iterating upon it and building a community.
+                  This project actually generated profit for us through donations from the community we created!
+              </p>
+
+            </div>
+        </section>
+      
+      </div>
+    </section>
+
+
+    <section id="Achievements" class="parallax-section parallax bg3">
         <div class="parallax-caption">
-            <span id="achievements-caption" class="parallax-border">ACHIEVEMENTS</span>
+            <span id="achievements-caption" class="parallax-border">SKILLS & ACHIEVEMENTS</span>
         </div>
     </section>
-    
 
-    <footer class="footer">
-      Footer
-    </footer>
+
+    <section class="static">
+      <div class="flex-container-640px-min wrapper">
+     
+        <!-- Content -->
+        <section class="content">
+
+            <div class="content-card">
+                <h3 style="text-align:center;">Programming Skills</h3>
+                <p>
+                  I have had experience with the following programming languages and technologies,
+                </p>
+                <div class="flex-container-640px-min flex-container-639px-max">
+                    <div class="flex padding-10">
+                      <ul>
+                        <li>HTML + CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Redux</li>
+                        <li>RESTful APIs and WebSockets</li>
+                        <li>Python</li>
+                      </ul>
+                    </div>
+    
+                    <div class="flex padding-10 float-right">
+                        <ul>
+                          <li>Docker</li>
+                          <li>Java</li>
+                          <li>C & C++</li>
+                          <li>Git</li>
+                          <li>Relational Databases (MySQL)</li>
+                          <li>NoSQL Databases (Redis, MongoDB & Neo4j)</li>
+                        </ul>
+                      </div>
+                  </div>
+  
+              </div>
+
+            <div class="content-card">
+              <h3 style="text-align:center;">University (2015-2019)</h3>
+              <p>
+                I graduated university with a 1st class Bachelor's of Computer Science with the following awards,
+              </p>
+              <div class="flex padding-10">
+                <ul>
+                  <li>Certifcate of Merit for my performance in 1st, 2nd, 3rd and 4th year.</li>
+                  <li>Deputy Principal's Award for my performance in 3rd and 4th year.</li>
+                </ul>
+              </div>
+
+            </div>
+        </section>
+      
+      </div>
+    </section>
+    
   </main>
   
+  <!-- The Modal -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="img-modal-caption" class="img-modal-caption"></div>
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var modalOverlay = document.getElementById("modal-overlay");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("img-modal-caption");
+
+    document.body.onclick = function(e) {
+      console.log(e)
+      e = window.event ? event.srcElement : e.target;
+      if (e.className && e.className.indexOf('img-content') != -1) {
+        modal.style.display = "block";
+        modalOverlay.style.display = "block";
+        modalImg.src = e.getAttribute('src');
+        captionText.innerHTML = "<p>"+e.getAttribute('alt')+"</p>";
+      }
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+      modalOverlay.style.display = "none";
+    }
+  </script>
 
 </body>
 
